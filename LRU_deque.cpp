@@ -30,6 +30,8 @@ public:
         while(*it!=key){
             it++;
         }
+        //reorder
+        //to manage the least resently used cache, we have remove this key and add to the end of deque
         dq.erase(it);
         dq.push_back(key);
         return mp[key];
