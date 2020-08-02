@@ -30,6 +30,8 @@ public:
         // this function should return value corresponding to key
         if(mp.find(key)==mp.end())
             return -1;
+        //reorder
+        //to manage the least resently used cache, we have remove this key and add to the end of list
         dq.remove(key);
         dq.push_front(key);
         return mp[key];
